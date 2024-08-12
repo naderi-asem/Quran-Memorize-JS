@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <section class="container">
+    <aside class="aside">
+      <button class="start-btn aside__btn">start</button>
+      <button class="reload-btn aside__btn">reload</button>
+      <form action="">
+        <div class="selectionVerse">
+          <div class="surah_names">
+            <label for="select_surah">surah name</label>
+            <select name="select_surah" id="select_surah" class="select_surah">
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="verse_number">
+            <!-- <label for="verse_num">verse Number</label> -->
+            <input type="number" class="verse_num" name="verse_num" id="verse_num" min="1" placeholder="Enter the verse number of the surah">
+          </div>
+          <button type="submit" class="submitBtn">Go to verse</button>
+        </div>
+      </form>
+      <div class="range-box">
+        <label for="verse-range">The highest random verse number</label>
+        <input type="range" id="verse-range" name="verse-range" class="verse-range" min="1" value="">
+        <span class="range-value">15</span>
+      </div>
+    </aside>
+    <div id="app" class="app__content">
+      <div class="Info">
+        <h3>Holy Quran Memorize App</h3>
+        <div class="surahInfo">
+          <!-- <h4 class="surahInfo__name">name: al-bagharah</h4>
+          <h4 class="surahInfo__totalVerse">total verses: 286</h4>
+          <h4 class="surahInfo__verseNumber">total verses: 286</h4> -->
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="ctrlBtns">
+          <button class="ctrlBtn__prev">previous</button>
+          <button class="ctrlBtn__next">next</button>
+        </div>
+        <div class="verse">
+          <p class="verse__text">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script type="module" src="./src/components/QuranMemorize.js"></script> -->
+  <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>
