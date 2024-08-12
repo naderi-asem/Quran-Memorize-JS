@@ -210,16 +210,5 @@ function setRangeInputProperties(surah) {
 }
 
 
-verseRangeInput.addEventListener("input", (e) => {
-    const limited = e.target.value;
-    const limitedVerses = surah.verses.filter(v => v.id <= limited);
-    const limitedSurah = surah;
-    limitedSurah.verses = limitedVerses;
-    console.log("limited surah: ", limitedSurah);
-    verseValueTag.textContent = limited;
-    console.log("range input event: ", e);
-});
-
-
 
 
